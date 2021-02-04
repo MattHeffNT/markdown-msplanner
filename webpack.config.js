@@ -7,8 +7,19 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     library: 'myLibrary'
   },
+
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+  
   mode: "development",
   watchOptions: {
     ignored: /node_modules/
   }
-};
+}
+
