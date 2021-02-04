@@ -8,6 +8,11 @@
             "matches": [
                 "https://tasks.office.com/*"  
             ],
+
+            "css": [
+                "./planner.css"
+            ],
+
             "js": [
                 "./dist/main.js"
             ],
