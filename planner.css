@@ -4,9 +4,15 @@
     padding-bottom:15px !important;
 }
 
+/* Unordered List  */
 .description-hyperlinks.isDialogStyle>ul>li {
     list-style: disc !important;
     margin-left: 18px;
+}
+
+/* Ordered List  */
+.description-hyperlinks.isDialogStyle>ol>li {
+    list-style-type: decimal;
 }
 
 .description-hyperlinks.isDialogStyle>h1,.description-hyperlinks.isDialogStyle>h2,.description-hyperlinks.isDialogStyle>h3 {
