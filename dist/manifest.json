@@ -3,7 +3,6 @@
     "description": "adds markdown to planner",
     "version": "1.0",
     "manifest_version": 2,
- 
     "content_scripts": [
         {
             "matches": [
@@ -15,14 +14,10 @@
             ],
 
             "js": [
-                "./dist/main.js"
+                "./main.js"
             ],
 
             "run_at": "document_idle"            
         }
-    ],
-
-    "icons": {
-        "48": "planner48.png",
-       "128": "planner128.png" }
+    ]
   }
