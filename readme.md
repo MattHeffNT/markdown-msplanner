@@ -8,12 +8,12 @@ Chrome store extension will be linked here soon.
 
 ## How to use in Chrome/Edge-Chromium
 
-Download this <a href ="https://github.com/MattHeffNT/markdown-msplanner/archive/master.zip" download>file</a> as a zip
-Unzip the folder
-Visit chrome://extensions (via omnibox or menu -> Tools -> Extensions). Enable Developer mode by ticking the checkbox in the upper-right corner.
+1. Download this zip file <a href ="https://github.com/MattHeffNT/markdown-msplanner/archive/master.zip" download>file</a>
+2. Unzip the folder
+3. Visit chrome://extensions (via omnibox or menu -> Tools -> Extensions). Enable Developer mode by ticking the checkbox in the upper-right corner.
 Click on the "Load unpacked extension..." button. Select the folder you just unzipped (where you downloaded the file).
 
-To learn how to use markdown here is a cheatsheet: <a href ="https://www.markdownguide.org/cheat-sheet/">Markdown Cheatsheet</a>
+To learn how to use markdown here is a cheatsheet: <a href ="https://www.markdownguide.org/cheat-sheet/" target="_blank" >Markdown Cheatsheet</a>
 
 ## For Devs
 
