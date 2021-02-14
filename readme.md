@@ -6,6 +6,8 @@ Microsoft is probably already working on this as a default feature....but for no
 
 Chrome store extension will be linked here soon.
 
+<a href = "https://chrome.google.com/webstore/detail/ms-planner-markdown-exten/lblllkkilkpgkmcgfllmfhopdmkoacii?hl=en&authuser=0"><img src =  "./chrome badge.png"></a>
+
 ## How to use in Chrome/Edge-Chromium
 
 1. Download this zip file <a href ="https://github.com/MattHeffNT/markdown-msplanner/archive/master.zip" download>file</a>
