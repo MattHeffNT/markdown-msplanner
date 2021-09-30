@@ -2,7 +2,7 @@
 
 #  Markdown-msplanner 
 
-Microsoft is probably already working on this as a default feature....but for now here is a chrome extension to add markdown to Microsoft Planner's Note section. This is still in development so pull requests welcome.
+Microsoft is probably already working on this as a default feature....but for now here is a chrome extension to add markdown to Microsoft Planner's Note section.
 
 <a href = "https://chrome.google.com/webstore/detail/ms-planner-markdown-exten/lblllkkilkpgkmcgfllmfhopdmkoacii?hl=en&authuser=0"><img src = "./chrome badge.png"></a>
 
