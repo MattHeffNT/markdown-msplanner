@@ -8,6 +8,11 @@ Microsoft is probably already working on this as a default feature....but for no
 
 To learn how to use markdown here is a cheatsheet: <a href ="https://www.markdownguide.org/cheat-sheet/" target="_blank" >Markdown Cheatsheet</a>
 
+## To Do
+
+- Port to Edge addons store
+- Add support for nested lists
+
 ## For Devs
 
 For Devs: Clone the repo to your desktop and then npm install will install the respective dependencies. Use NPM Run Watch or NPM Run Build and then select the project folder and add to chrome as an unpacked extension. 
