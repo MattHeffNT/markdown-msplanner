@@ -12,6 +12,7 @@ To learn how to use markdown here is a cheatsheet: <a href ="https://www.markdow
 
 - Port to Edge addons store
 - Add support for nested lists
+- List items not working correctly
 
 ## For Devs
 
