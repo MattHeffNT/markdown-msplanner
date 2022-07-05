@@ -16,7 +16,7 @@ module.exports = {
       },
     ],
   },
-  
+
   mode: "production",
   watchOptions: {
     ignored: /node_modules/
