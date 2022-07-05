@@ -1,4 +1,8 @@
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?business=5DZP7QEDWW85A&currency_code=AUD)
+
+
+
+<a href="https://www.paypal.com/donate?business=5DZP7QEDWW85A&currency_code=AUD"><img src="https://img.shields.io/badge/Donate-PayPal-green.svg">
+Buy me a cup of coffee if you want</img></a>
 
 #  Markdown-msplanner 
 
