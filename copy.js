@@ -4,7 +4,7 @@ const JSZip = require('jszip')
 const fs = require('fs')
 const zip = new JSZip();
 
-// Using Google Closure Compiler
+// Use YUI to minify the CSS
 minify({
     compressor: yui,
     input: './planner.css',
