@@ -15,6 +15,7 @@ To learn how to use markdown here is a cheatsheet: <a href ="https://www.markdow
 ## To Do
 
 - Port to Edge addons store
+- Port to Firefox
 - Add support for nested lists
 
 ## For Devs
