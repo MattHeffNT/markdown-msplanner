@@ -1,23 +1,32 @@
 {
+    "manifest_version": 3,
     "name": "MS Planner Markdown Extension",
-    "description": "adds markdown to planner",
     "version": "1.0",
-    "manifest_version": 2,
+    "description": "Adds Markdown to Planner",
+    "permissions": [
+        "activeTab"
+    ],
     "content_scripts": [
         {
             "matches": [
-                "https://tasks.office.com/*"  
+                "https://tasks.office.com/*"
             ],
-
             "css": [
                 "./planner.css"
             ],
-
             "js": [
-                "./dist/main.js"
-            ],
-
-            "run_at": "document_idle"            
+                "./main.js"
+            ]
         }
-    ]
+    ],
+    "icons": {
+        "16": "planner.png",
+        "48": "planner48.png",
+        "128": "planner128.png"
+    },
+    "browser_specific_settings": {
+    "gecko": {
+      "id": "msplanner-markdown@example.com" 
+    }
   }
+}

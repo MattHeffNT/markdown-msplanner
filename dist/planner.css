@@ -1,1 +1,22 @@
-.description-hyperlinks{padding-left:25px!important;padding-top:15px!important;padding-bottom:15px!important}.description-hyperlinks>ul>li{list-style:disc!important;margin-left:18px}.description-hyperlinks>ol>li{list-style-type:decimal}.description-hyperlinks>h1,.description-hyperlinks>h2,.description-hyperlinks>h3{line-height:30px!important}
+.description-hyperlinks {
+  padding-left: 25px !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+
+/* Unordered List  */
+.description-hyperlinks > ul > li {
+  list-style: disc !important;
+  margin-left: 18px;
+}
+
+/* Ordered List  */
+.description-hyperlinks > ol > li {
+  list-style-type: decimal;
+}
+
+.description-hyperlinks > h1,
+.description-hyperlinks > h2,
+.description-hyperlinks > h3 {
+  line-height: 30px !important;
+}

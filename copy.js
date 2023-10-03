@@ -1,42 +1,49 @@
-const minify = require('@node-minify/core');
-const yui = require('@node-minify/yui');
-const JSZip = require('jszip')
-const fs = require('fs')
-const zip = new JSZip();
+const fs = require('fs').promises;
+const path = require('path');
+const JSZip = require('jszip');
 
-// Use YUI to minify the CSS
-minify({
-    compressor: yui,
-    input: './planner.css',
-    output: './planner.css',
-    type: 'css',
-    callback: function (err, min) {
-        if (err) console.log(err);
-    }
-});
+async function main() {
+    // Minify and copy the CSS file
+    const sourceCSS = './planner.css';
+    const destinationCSS = './dist/planner.css';
+    await copyFile(sourceCSS, destinationCSS);
+    console.log("CSS copied and minified");
 
-// copy css file to the dist folder 
-fs.copyFile('./planner.css', './dist/planner.css', (err) => {
-    if (err) throw err;
-    console.log("files copied");
-})
+    // Copy the manifest file
+    const sourceManifest = './manifest.json';
+    const destinationManifest = './dist/manifest.json';
+    await copyFile(sourceManifest, destinationManifest);
+    console.log("Manifest copied");
 
-// zip all the files in dist folder then create zip file
-const path = './dist'
-async function ls() {
-    const dir = await fs.promises.opendir(path)
-    for await (const dirent of dir) {
-        zip.file(dirent.name, `${dirent.name}`)
-    }
-    zip
-        .generateNodeStream({ type: 'nodebuffer', streamFiles: true })
-        .pipe(fs.createWriteStream('dist.zip'))
-        .on('finish', function () {
-            // JSZip generates a readable stream with a "end" event,
-            // but is piped here in a writable stream which emits a "finish" event.
-            console.log("...dist.zip ready");
-        });
-
+    // Zip all files in the 'dist' folder
+    await zipDirectory('./dist', 'dist.zip');
+    console.log("dist.zip ready");
 }
 
-ls('.').catch(console.error)
+async function copyFile(sourcePath, destinationPath) {
+    try {
+        const destinationDir = path.dirname(destinationPath);
+        await fs.mkdir(destinationDir, { recursive: true });
+        await fs.copyFile(sourcePath, destinationPath);
+    } catch (err) {
+        console.error(`Error copying ${sourcePath} to ${destinationPath}: ${err}`);
+    }
+}
+
+async function zipDirectory(sourceDir, zipFileName) {
+    try {
+        const zip = new JSZip();
+        const files = await fs.readdir(sourceDir);
+        for (const file of files) {
+            const filePath = path.join(sourceDir, file);
+            const fileData = await fs.readFile(filePath);
+            zip.file(file, fileData);
+        }
+        const zipData = await zip.generateAsync({ type: 'nodebuffer' });
+        await fs.writeFile(zipFileName, zipData);
+    } catch (err) {
+        console.error(`Error zipping directory ${sourceDir}: ${err}`);
+    }
+}
+
+main().catch(console.error);
